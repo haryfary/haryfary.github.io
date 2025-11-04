@@ -4,38 +4,41 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Hary Fary • Import Export to the EU</title>
-  <meta name="description" content="hary Fary helps businesses bring products into the EU with smooth customs, clear documentation, and a touch of charm." />
+  <meta name="description" content="Hary Fary helps businesses bring products into the EU with smooth customs and clear documentation." />
   <style>
-    :root {
-      --bg:#fafafa; --fg:#0d0d0d; --muted:#666; --accent:#0e7ef1;
-    }
-    body {
-      margin:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Inter, sans-serif;
-      background: var(--bg); color: var(--fg);
+    :root { --bg:#fafafa; --fg:#0d0d0d; --muted:#666; --accent:#0e7ef1; }
+    body{
+      margin:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,Inter,sans-serif;
+      background:var(--bg); color:var(--fg);
       display:flex; flex-direction:column; align-items:center; justify-content:center;
       height:100vh; text-align:center; padding:20px;
     }
-    h1 { font-size:2.6rem; margin:0.4em 0; }
-    p { color:var(--muted); max-width:500px; margin:0 auto 1.2em; line-height:1.5; }
-    .btn {
+    h1{font-size:2.6rem; margin:.4em 0;}
+    p{color:var(--muted); max-width:500px; margin:0 auto 1.2em; line-height:1.5;}
+    .btn{
       display:inline-block; padding:10px 22px; border:1px solid var(--fg); border-radius:50px;
       text-decoration:none; color:var(--fg); font-weight:600; transition:.3s;
     }
-    .btn:hover { background:var(--fg); color:#fff; }
-    img {
+    .btn:hover{background:var(--fg); color:#fff;}
+    img{
       width:200px; height:200px; object-fit:cover; border-radius:50%; margin-bottom:1em;
-      box-shadow:0 8px 20px rgba(0,0,0,0.1);
+      box-shadow:0 8px 20px rgba(0,0,0,.1); transition:transform .4s ease;
     }
-    footer { position:absolute; bottom:12px; font-size:14px; color:var(--muted); }
+    img:hover{transform:scale(1.05);}
+    footer{position:absolute; bottom:12px; font-size:14px; color:var(--muted);}
   </style>
 </head>
 <body>
-  <img src="https://images.unsplash.com/photo-1601758124092-0c86e93e8d94?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Cute puppy" />
-  <h1>hary Fary</h1>
-  <p>Simple. Smooth. Street Smart.  
-     Import–export services made easy for the EU market.</p>
-  <a href="mailto:hello@haryferry.com" class="btn">Get in Touch</a>
-  <footer>© <span id="year"></span> hary Fary</footer>
+  <img
+    src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80"
+    alt="Cute puppy"
+    referrerpolicy="no-referrer"
+    onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1507149833265-60c372daea22?auto=format&fit=crop&w=400&q=80';"
+  />
+  <h1>Hary Fary</h1>
+  <p>Simple. Smooth. Street Smart. Import export services made easy for the EU market.</p>
+  <a href="mailto:hello@haryfary.com" class="btn">Get in Touch</a>
+  <footer>© <span id="year"></span> Hary Fary</footer>
 
   <script>document.getElementById("year").textContent=new Date().getFullYear();</script>
 </body>
