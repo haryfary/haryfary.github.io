@@ -3,160 +3,40 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Harry Ferry • Import Export to the EU</title>
-  <meta name="description" content="Harry Ferry helps brands move products into the EU with simple compliance, customs coordination, and reliable logistics." />
-  <meta property="og:title" content="Harry Ferry • Import Export to the EU" />
-  <meta property="og:description" content="Simple import services. EU ready documentation. Fast customs clearance." />
-  <meta property="og:type" content="website" />
-  <meta name="color-scheme" content="light dark" />
+  <title>Harry Fary • Import Export to the EU</title>
+  <meta name="description" content="Harry Fary helps businesses bring products into the EU with smooth customs, clear documentation, and a touch of charm." />
   <style>
-    :root{
-      --bg:#fafafa; --fg:#0d0d0d; --muted:#666; --line:#e8e8e8; --accent:#0e7ef1;
-      --card:#ffffff; --shadow:0 8px 24px rgba(0,0,0,.08); --radius:16px;
+    :root {
+      --bg:#fafafa; --fg:#0d0d0d; --muted:#666; --accent:#0e7ef1;
     }
-    @media (prefers-color-scheme: dark){
-      :root{
-        --bg:#0c0c0c; --fg:#f3f3f3; --muted:#9a9a9a; --line:#1d1d1d; --card:#121212;
-        --shadow:0 8px 24px rgba(0,0,0,.45); --accent:#4aa3ff;
-      }
+    body {
+      margin:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Inter, sans-serif;
+      background: var(--bg); color: var(--fg);
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      height:100vh; text-align:center; padding:20px;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; background:radial-gradient(1400px 800px at 80% -10%, rgba(14,126,241,.08), transparent 60%),
-                 radial-gradient(1000px 600px at 0% 100%, rgba(14,126,241,.06), transparent 60%), var(--bg);
-      color:var(--fg); font:16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, Inter, Arial, sans-serif;
+    h1 { font-size:2.6rem; margin:0.4em 0; }
+    p { color:var(--muted); max-width:500px; margin:0 auto 1.2em; line-height:1.5; }
+    .btn {
+      display:inline-block; padding:10px 22px; border:1px solid var(--fg); border-radius:50px;
+      text-decoration:none; color:var(--fg); font-weight:600; transition:.3s;
     }
-    .wrap{max-width:1120px; margin:0 auto; padding:28px}
-    header{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:10px 0}
-    .brand{display:flex; align-items:center; gap:12px; text-decoration:none; color:var(--fg)}
-    .logo{width:36px; height:36px; border-radius:9px; background:linear-gradient(135deg, var(--accent), #6ec0ff);
-      box-shadow:var(--shadow); display:grid; place-items:center; color:white; font-weight:700}
-    .brand span{font-weight:700; letter-spacing:.2px}
-    nav a{color:var(--muted); text-decoration:none; margin:0 10px; font-weight:600}
-    nav a:hover{color:var(--fg)}
-    .btn{display:inline-block; padding:12px 18px; border:1px solid var(--fg); color:var(--fg);
-      text-decoration:none; border-radius:999px; font-weight:700; transition:.25s}
-    .btn:hover{background:var(--fg); color:#fff}
-    .btn-primary{border-color:transparent; background:var(--accent); color:#fff}
-    .btn-primary:hover{filter:brightness(.92)}
-    .hero{padding:64px 0 40px; display:grid; grid-template-columns:1.2fr .8fr; gap:28px; align-items:center}
-    .hero h1{font-size:clamp(32px,5vw,56px); line-height:1.1; margin:0 0 14px}
-    .hero p{color:var(--muted); font-size:clamp(16px,2.4vw,19px); margin:0 0 22px}
-    .card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); padding:20px}
-    .kpis{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:20px}
-    .kpis div{padding:16px; border:1px solid var(--line); border-radius:12px; text-align:center}
-    .kpis b{font-size:22px}
-    .section{padding:36px 0}
-    h2{font-size:26px; margin:0 0 8px}
-    .muted{color:var(--muted)}
-    .grid{display:grid; gap:14px}
-    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
-    .item{padding:18px; border:1px solid var(--line); border-radius:12px}
-    .row{display:flex; gap:12px; align-items:flex-start}
-    .ico{width:34px; height:34px; border-radius:8px; background:rgba(14,126,241,.12); display:grid; place-items:center; color:var(--accent); flex:0 0 34px}
-    .process{display:grid; grid-template-columns:repeat(4,1fr); gap:14px}
-    .step{padding:18px; border:1px dashed var(--line); border-radius:12px}
-    footer{padding:40px 0 20px; color:var(--muted); font-size:14px}
-    .cta{display:flex; gap:12px; flex-wrap:wrap}
-    @media (max-width:860px){
-      .hero{grid-template-columns:1fr}
-      .kpis{grid-template-columns:1fr 1fr}
-      .grid.cols-3{grid-template-columns:1fr}
-      .process{grid-template-columns:1fr 1fr}
+    .btn:hover { background:var(--fg); color:#fff; }
+    img {
+      width:200px; height:200px; object-fit:cover; border-radius:50%; margin-bottom:1em;
+      box-shadow:0 8px 20px rgba(0,0,0,0.1);
     }
-    @media (max-width:520px){ .kpis{grid-template-columns:1fr} .process{grid-template-columns:1fr} }
-    /* tiny fade */
-    [data-fade]{opacity:0; transform:translateY(8px); animation:fade .7s ease forwards; }
-    [data-fade="2"]{animation-delay:.08s} [data-fade="3"]{animation-delay:.16s} [data-fade="4"]{animation-delay:.24s}
-    @keyframes fade{to{opacity:1; transform:none}}
+    footer { position:absolute; bottom:12px; font-size:14px; color:var(--muted); }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <a class="brand" href="#">
-        <div class="logo">HF</div><span>Harry Ferry</span>
-      </a>
-      <nav>
-        <a href="#services">Services</a>
-        <a href="#process">Process</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+  <img src="https://images.unsplash.com/photo-1601758124092-0c86e93e8d94?auto=format&fit=crop&w=400&q=80" alt="Cute puppy" />
+  <h1>Harry Fary</h1>
+  <p>Simple. Smooth. Street Smart.  
+     Import–export services made easy for the EU market.</p>
+  <a href="mailto:hello@harryferry.com" class="btn">Get in Touch</a>
+  <footer>© <span id="year"></span> Harry Fary</footer>
 
-    <section class="hero">
-      <div>
-        <h1 data-fade="1">Import made simple for the EU</h1>
-        <p data-fade="2">We help you move products into Europe with clear documents, smooth customs, and reliable partners. Less paperwork. More delivered orders.</p>
-        <div class="cta" data-fade="3">
-          <a class="btn btn-primary" href="#contact">Get a quote</a>
-          <a class="btn" href="mailto:hello@harryferry.com">Email us</a>
-        </div>
-        <div class="kpis" data-fade="4">
-          <div><b>48h</b><div class="muted">typical import clearance</div></div>
-          <div><b>EU-ready</b><div class="muted">label and docs support</div></div>
-          <div><b>Trusted</b><div class="muted">freight partners in DE & NL</div></div>
-        </div>
-      </div>
-      <div class="card" data-fade="2">
-        <h2 style="margin-top:0">Scope</h2>
-        <div class="grid">
-          <div class="row"><div class="ico">📦</div><div><b>Customs filing</b><div class="muted">EORI, import declarations, HS codes</div></div></div>
-          <div class="row"><div class="ico">🧾</div><div><b>Compliance</b><div class="muted">food, agri, packaging, origin</div></div></div>
-          <div class="row"><div class="ico">🚚</div><div><b>Logistics</b><div class="muted">air, sea, last mile inside EU</div></div></div>
-          <div class="row"><div class="ico">🏷️</div><div><b>EU labeling</b><div class="muted">ingredients, allergens, nutrition</div></div></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="services" class="section">
-      <h2>Services</h2>
-      <p class="muted">Pick what you need. We can run full shipments or act as your on-demand import desk.</p>
-      <div class="grid cols-3" style="margin-top:12px">
-        <div class="item">
-          <b>Import as a service</b>
-          <div class="muted">We handle entries, fees, and tracking. You keep ownership of goods.</div>
-        </div>
-        <div class="item">
-          <b>Documents and checks</b>
-          <div class="muted">Invoice review, HS mapping, certificates, organic paperwork.</div>
-        </div>
-        <div class="item">
-          <b>Starter run</b>
-          <div class="muted">Small pilot load to validate demand and process inside the EU.</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="process" class="section">
-      <h2>Process</h2>
-      <p class="muted">Four clear steps from supplier to shelf.</p>
-      <div class="process" style="margin-top:12px">
-        <div class="step"><b>1. Assess</b><div class="muted">Product, HS code, incoterms, route.</div></div>
-        <div class="step"><b>2. Prepare</b><div class="muted">Docs, labels, packaging rules, booking.</div></div>
-        <div class="step"><b>3. Clear</b><div class="muted">Arrival, duties, taxes, controls.</div></div>
-        <div class="step"><b>4. Deliver</b><div class="muted">Warehouse or buyer handoff with tracking.</div></div>
-      </div>
-    </section>
-
-    <section id="contact" class="section card">
-      <h2 style="margin-top:0">Contact</h2>
-      <p class="muted">Tell us the product, volume, and origin. We reply with a simple plan and a clear quote.</p>
-      <div class="cta" style="margin-top:10px">
-        <a class="btn btn-primary" href="mailto:hello@harryferry.com">hello@harryferry.com</a>
-        <a class="btn" href="https://haryfary.github.io" target="_blank" rel="noopener">View sample page</a>
-      </div>
-      <p class="muted" style="margin-top:12px">Based in Germany. Working across the EU.</p>
-    </section>
-
-    <footer>
-      <div class="wrap" style="padding:0">
-        © <span id="y"></span> Harry Ferry. All rights reserved.
-      </div>
-    </footer>
-  </div>
-
-  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+  <script>document.getElementById("year").textContent=new Date().getFullYear();</script>
 </body>
 </html>
