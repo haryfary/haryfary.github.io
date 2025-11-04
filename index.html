@@ -1,45 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Required -->
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Hary Fary • Import Export to the EU</title>
-  <meta name="description" content="Hary Fary helps businesses bring products into the EU with smooth customs and clear documentation." />
-  <style>
-    :root { --bg:#fafafa; --fg:#0d0d0d; --muted:#666; --accent:#0e7ef1; }
-    body{
-      margin:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,Inter,sans-serif;
-      background:var(--bg); color:var(--fg);
-      display:flex; flex-direction:column; align-items:center; justify-content:center;
-      height:100vh; text-align:center; padding:20px;
-    }
-    h1{font-size:2.6rem; margin:.4em 0;}
-    p{color:var(--muted); max-width:500px; margin:0 auto 1.2em; line-height:1.5;}
-    .btn{
-      display:inline-block; padding:10px 22px; border:1px solid var(--fg); border-radius:50px;
-      text-decoration:none; color:var(--fg); font-weight:600; transition:.3s;
-    }
-    .btn:hover{background:var(--fg); color:#fff;}
-    img{
-      width:200px; height:200px; object-fit:cover; border-radius:50%; margin-bottom:1em;
-      box-shadow:0 8px 20px rgba(0,0,0,.1); transition:transform .4s ease;
-    }
-    img:hover{transform:scale(1.05);}
-    footer{position:absolute; bottom:12px; font-size:14px; color:var(--muted);}
-  </style>
-</head>
-<body>
-  <img
-    src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80"
-    alt="Cute puppy"
-    referrerpolicy="no-referrer"
-    onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1507149833265-60c372daea22?auto=format&fit=crop&w=400&q=80';"
-  />
-  <h1>Hary Fary</h1>
-  <p>Simple. Smooth. Street Smart. Import export services made easy for the EU market.</p>
-  <a href="mailto:hello@haryfary.com" class="btn">Get in Touch</a>
-  <footer>© <span id="year"></span> Hary Fary</footer>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+  <title>Import from India to Germany & EU | Hary Fary Trade Services</title>
+  <meta name="description" content="Hary Fary helps EU SMEs import from India with confidence: supplier sourcing, quality control, freight, customs brokerage, and EU compliance. Modern, transparent, end-to-end.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://haryfary.github.io/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Import from India to Germany & EU | Hary Fary" />
+  <meta property="og:description" content="Sourcing, QC, freight, customs & EU compliance—handled end-to-end." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://haryfary.github.io/" />
+  <meta property="og:image" content="https://haryfary.github.io/assets/og-image.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Import from India to Germany & EU | Hary Fary" />
+  <meta name="twitter:description" content="Sourcing, QC, freight, customs & EU compliance—handled end-to-end." />
+  <meta name="twitter:image" content="https://haryfary.github.io/assets/og-image.png" />
+
+  <!-- Favicon (temporary transparent) -->
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
+  <!-- Fonts + Styles -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+
+  <!-- JSON-LD: Organization + LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":["Organization","LocalBusiness"],
+    "name":"Hary Fary Trade Services",
+    "url":"https://haryfary.github.io/",
+    "description":"EU–India import, sourcing, freight and customs services for SMEs.",
+    "logo":"https://haryfary.github.io/assets/og-image.png",
+    "telephone":"+49-30-XXXXXXX",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Example Str. 12",
+      "addressLocality":"Berlin",
+      "postalCode":"10115",
+      "addressCountry":"DE"
+    },
+    "areaServed":["DE","AT","NL","BE","FR","IT"]
+  }
+  </script>
+  <!-- JSON-LD: Service -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "serviceType":"Import from India to EU",
+    "provider":{"@type":"Organization","name":"Hary Fary Trade Services","url":"https://haryfary.github.io/"},
+    "areaServed":"EU",
+    "hasOfferCatalog":{
+      "@type":"OfferCatalog",
+      "name":"Hary Fary Services",
+      "itemListElement":[
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Supplier Sourcing & Audit"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Quality Control (AQL)"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Customs Brokerage (Germany)"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Freight Forwarding"}}
+      ]
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="hf-container hf-header">
+    <a class="hf-logo" href="#top" aria-label="Hary Fary Home">
+      <span>Hary Fary</span>
+    </a>
+    <nav class="hf-nav" aria-label="Primary">
+      <a href="#how">How it works</a>
+      <a href="#services">Services</a>
+      <a href="#proof">Why us</a>
+      <a href="#faq">FAQ</a>
+      <a class="hf-btn" href="#contact">Get a Cost Estimate</a>
+    </nav>
+    <button class="hf-burger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Mobile Nav -->
+  <nav id="mobile-nav" class="hf-mobile-nav" hidden>
+    <a href="#how">How it works</a>
+    <a href="#services">Services</a>
+    <a href="#proof">Why us</a>
+    <a href="#faq">FAQ</a>
+    <a class="hf-btn" href="#contact">Get a Cost Estimate</a>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hf-hero" id="top">
+    <div class="hf-container">
+      <h1>Import from India, made simple.</h1>
+      <p class="hf-subtitle">Sourcing, quality control, freight, customs & EU compliance—managed by experts in Germany and India.</p>
+      <div class="hf-cta-group">
+        <a class="hf-btn hf-btn-primary" href="#contact">Get a Cost Estimate</a>
+        <a class="hf-link" href="#checklist">Download Import Checklist</a>
+      </div>
+      <div class="hf-hero-note">Trusted by EU SMEs in textiles, home goods & engineering parts.</div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="hf-section" id="how">
+    <div class="hf-container">
+      <h2>How it works</h2>
+      <div class="hf-cards">
+        <article class="hf-card"><h3>1. Discover</h3><p>Define specs and shortlist verified Indian suppliers.</p></article>
+        <article class="hf-card"><h3>2. Qualify</h3><p>Samples, AQL plan, and factory audit to de-risk quality.</p></article>
+        <article class="hf-card"><h3>3. Contract</h3><p>Right Incoterms, QC milestones, and payment terms.</p></article>
+        <article class="hf-card"><h3>4. Ship & Clear</h3><p>Sea/air freight booked, insurance added, ATLAS customs filed.</p></article>
+        <article class="hf-card"><h3>5. Deliver</h3><p>Final mile to your warehouse and a post-shipment review.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="hf-section" id="services" aria-labelledby="services-title">
+    <div class="hf-container">
+      <h2 id="services-title">Services</h2>
+      <div class="hf-grid-3">
+        <article class="hf-service">
+          <h3>Supplier Sourcing & Audit</h3>
+          <ul>
+            <li>Factory shortlisting & capability checks</li>
+            <li>On-site audits and compliance</li>
+            <li>Sampling & spec alignment</li>
+          </ul>
+        </article>
+        <article class="hf-service">
+          <h3>Quality Control (AQL)</h3>
+          <ul>
+            <li>Pre-production & pre-shipment inspections</li>
+            <li>Defect classification and reports</li>
+            <li>Corrective actions with suppliers</li>
+          </ul>
+        </article>
+        <article class="hf-service">
+          <h3>Customs & Freight</h3>
+          <ul>
+            <li>HS classification & duty estimates</li>
+            <li>Sea/air freight & insurance</li>
+            <li>ATLAS customs & EUSt management</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why us -->
+  <section class="hf-section hf-section-alt" id="proof">
+    <div class="hf-container">
+      <h2>Why Hary Fary</h2>
+      <div class="hf-grid-3">
+        <article class="hf-proof"><h3>EU Compliance</h3><p>CE/REACH/RoHS know-how, correct labeling, and documentation.</p></article>
+        <article class="hf-proof"><h3>India Network</h3><p>Verified factories across textiles, home goods & engineering parts.</p></article>
+        <article class="hf-proof"><h3>Transparent Costs</h3><p>Clear landed-cost estimates before you commit.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case highlights -->
+  <section class="hf-section" id="cases">
+    <div class="hf-container">
+      <h2>Results we’ve delivered</h2>
+      <div class="hf-cards">
+        <article class="hf-card"><h3>−18% landed cost</h3><p>Optimized Incoterms and consolidated shipments for a home goods importer.</p></article>
+        <article class="hf-card"><h3>4 days faster clearance</h3><p>Correct HS coding & pre-advice minimized inspections at DE ports.</p></article>
+        <article class="hf-card"><h3>−32% defect rate</h3><p>AQL inspections and CAPA reduced returns for textile client.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Checklist (lead magnet placeholder) -->
+  <section class="hf-section hf-section-alt" id="checklist" aria-labelledby="checklist-title">
+    <div class="hf-container">
+      <h2 id="checklist-title">India → EU Import Checklist (Free)</h2>
+      <p>Grab a simple, practical checklist that covers EORI, HS codes, Incoterms, EUSt, and QC steps.</p>
+      <a class="hf-btn hf-btn-secondary" href="#" aria-disabled="true">Coming soon</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="hf-section" id="faq" aria-labelledby="faq-title">
+    <div class="hf-container">
+      <h2 id="faq-title">FAQ</h2>
+      <details>
+        <summary>Do I need an EORI to import from India?</summary>
+        <p>Yes. You’ll need an EORI before your first import. We’ll guide you through the process.</p>
+      </details>
+      <details>
+        <summary>How do you estimate landed cost?</summary>
+        <p>We combine HS duty rates, freight, insurance, import VAT (EUSt) and handling fees into a transparent breakdown.</p>
+      </details>
+      <details>
+        <summary>Can you handle CE/REACH/RoHS?</summary>
+        <p>We coordinate lab testing, documentation checks, and labeling reviews to meet EU requirements.</p>
+      </details>
+      <details>
+        <summary>Which Incoterms do you recommend?</summary>
+        <p>It depends on control vs cost. We frequently support FOB, FCA, DAP, and DDP scenarios.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Contact / Lead form -->
+  <section class="hf-section hf-cta" id="contact" aria-labelledby="contact-title">
+    <div class="hf-container">
+      <h2 id="contact-title">Get a Cost Estimate</h2>
+      <p>Tell us a bit about your shipment and we’ll send a quick landed-cost estimate.</p>
+
+      <form class="hf-form" name="estimate" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="estimate" />
+        <div class="hf-grid-2">
+          <label><span>Name</span><input name="name" required /></label>
+          <label><span>Email</span><input type="email" name="email" required /></label>
+          <label><span>Product category</span><input name="product" placeholder="e.g., textiles, home goods, parts" required /></label>
+          <label><span>Incoterm (if known)</span><input name="incoterm" placeholder="FOB, CIF, DAP, DDP…" /></label>
+          <label class="hf-grid-2-span"><span>Notes</span><textarea name="notes" rows="4" placeholder="HS code (if known), weight, value, origin port…"></textarea></label>
+        </div>
+        <button class="hf-btn hf-btn-primary" type="submit">Send</button>
+      </form>
+
+      <div class="hf-contact-meta">
+        <p><strong>Office:</strong> Berlin, Germany • <strong>Phone:</strong> +49-30-XXXXXXX</p>
+        <p><strong>Email:</strong> hello@haryfary.com</p>
+        <p><a class="hf-link" href="#top">Back to top ↑</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="hf-footer">
+    <div class="hf-container hf-footer-inner">
+      <div>
+        <div class="hf-logo">Hary Fary</div>
+        <p>EU–India importing made simple.</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="#services">Services</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+      <div class="hf-copy">© <span id="year"></span> Hary Fary Trade Services</div>
+    </div>
+  </footer>
+
+  <!-- FAQPage JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Do I need an EORI to import from India?","acceptedAnswer":{"@type":"Answer","text":"Yes. You’ll need an EORI before your first import. We’ll guide you through the process."}},
+      {"@type":"Question","name":"How do you estimate landed cost?","acceptedAnswer":{"@type":"Answer","text":"We combine HS duty rates, freight, insurance, import VAT (EUSt) and handling fees into a transparent breakdown."}},
+      {"@type":"Question","name":"Can you handle CE/REACH/RoHS?","acceptedAnswer":{"@type":"Answer","text":"We coordinate lab testing, documentation checks, and labeling reviews to meet EU requirements."}},
+      {"@type":"Question","name":"Which Incoterms do you recommend?","acceptedAnswer":{"@type":"Answer","text":"It depends on control vs cost. We frequently support FOB, FCA, DAP, and DDP scenarios."}}
+    ]
+  }
+  </script>
+
+  <script src="assets/script.js" defer></script>
 </body>
 </html>
